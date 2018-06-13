@@ -1,8 +1,7 @@
 package com.java.version.eight.collection.stream;
 
-
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
-
 
 /**
  * <li>
@@ -15,7 +14,7 @@ import java.util.stream.Stream;
  * <li>Les données ne sont évaluées que quand le programme en a vraiment besoin (lazy
  * evaluation)</li>
  */
-public class CollectFlatmapReduceTest {
+public class CollectFilterAverageTest {
 
   public static void main(String[] args) {
 
@@ -23,9 +22,9 @@ public class CollectFlatmapReduceTest {
         Stream.of(new Personne(10, "tata"), new Personne(30, "toto"), new Personne(20, "titi"))
             .filter(personne -> personne.getAge() > 15).sorted();
 
-    Integer ageTotal = personnesStream.reduce(0, (somme, personne) -> somme + personne.getAge(),
-        (somme1, somme2) -> (somme1 + somme2));
-    System.out.println("age Total de la population filtrée : " + ageTotal);
+    double ageMoyen = personnesStream.collect(Collectors.averagingInt(p -> p.getAge()));
+    System.out.println("age moyen de la population filtrée : " + ageMoyen);
+
   }
 
 

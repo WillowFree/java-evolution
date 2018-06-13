@@ -1,8 +1,6 @@
 package com.java.version.eight.collection.stream;
 
-
 import java.util.stream.Stream;
-
 
 /**
  * <li>
@@ -15,7 +13,7 @@ import java.util.stream.Stream;
  * <li>Les données ne sont évaluées que quand le programme en a vraiment besoin (lazy
  * evaluation)</li>
  */
-public class CollectFlatmapReduceTest {
+public class CollectReduceTest {
 
   public static void main(String[] args) {
 

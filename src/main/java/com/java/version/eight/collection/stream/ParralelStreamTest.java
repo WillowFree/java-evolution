@@ -3,7 +3,7 @@ package com.java.version.eight.collection.stream;
 import java.util.Arrays;
 import java.util.concurrent.ForkJoinPool;
 
-public class ParraleStreamTest {
+public class ParralelStreamTest {
 
   public static void main(String[] args) {
     // Get available threads
